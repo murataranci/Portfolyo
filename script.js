@@ -1,4 +1,4 @@
-// AOS (Animate On Scroll) başlatma
+// Initialize AOS (Animate On Scroll)
 AOS.init({
     duration: 1200,
     once: false,
@@ -6,13 +6,13 @@ AOS.init({
     easing: 'ease-in-out'
 });
 
-// Yazı animasyonu için
+// For text animation
 const typingText = document.querySelector('.typing-text');
 const texts = [
     'Frontend Developer',
     'React & JavaScript Developer',
-    'Modern Web Teknolojileri',
-    'UI/UX Odaklı Geliştirici'
+    'Modern Web Technologies',
+    'UI/UX Focused Developer'
 ];
 let textIndex = 0;
 let charIndex = 0;
@@ -51,10 +51,10 @@ menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
     menuBtn.classList.toggle('menu-active');
     
-    // Menü açıkken scroll'u engelle
+    // Prevent scrolling when menu is open
     document.body.style.overflow = navLinks.classList.contains('nav-active') ? 'hidden' : 'auto';
     
-    // Link animasyonları
+    // Link animations
     navLinksItems.forEach((link, index) => {
         if (link.style.animation) {
             link.style.animation = '';
@@ -64,7 +64,7 @@ menuBtn.addEventListener('click', () => {
     });
 });
 
-// Menü linklerine tıklandığında menüyü kapat
+// Close menu when menu links are clicked
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('nav-active');
@@ -77,7 +77,7 @@ navLinksItems.forEach(link => {
     });
 });
 
-// Navbar scroll efekti
+// Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -87,7 +87,7 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 
-    // Aktif menü öğesini güncelle
+    // Update active menu item
     let current = '';
     
     navLinksItems.forEach(link => {
